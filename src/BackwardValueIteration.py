@@ -24,7 +24,7 @@ parent = {}  # Dictionary of parent of each node
 
 # Input:  graph and goal
 # Output: edge costs
-def forwardValueIteration(graph, start):
+def backwardValueIteration(graph, start):
     # Initially, the starting vertex distance is 0, and every other vertex is infinity
     # Each vertex' parent is "none"
     for v in graph:
@@ -61,7 +61,7 @@ def getPath(final):  # Print path from start to given vertex
     path.append(current)
     print path
 
-forwardValueIteration(graph, 'd')
+backwardValueIteration(graph, 'd')
 getDistances()
 getPath('a')
 
